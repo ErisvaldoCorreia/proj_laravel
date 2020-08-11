@@ -49,9 +49,11 @@
                             <button class="btn btn-primary">Editar</button>
                         </a>
 
-                        <a href="#">
-                            <button class="btn btn-danger">Deletar</button>
-                        </a>
+                        <form action="{{ route('agenda.destroy', $contatos->id) }}" method="POST" style="display: inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">DELETAR</button>
+                        </form>
 
                     </td>
                 </tr>

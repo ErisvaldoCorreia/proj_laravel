@@ -116,6 +116,14 @@ class AgendaController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        // Pode ser Essa modalidade
+        $contato = $this->objContato->find($id);
+        // Ou essa a seguir comentada
+        //$contato = ModelAgenda::findOrFail($id);
+        $contato->delete();
+
+        return redirect('agenda/');
+
     }
 }
