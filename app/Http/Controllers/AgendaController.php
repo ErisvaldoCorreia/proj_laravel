@@ -59,7 +59,7 @@ class AgendaController extends Controller
             'id_user'=>$request->id_user
         ]);
         if($cad){
-            return redirect('agenda');
+            return redirect('agenda')->with('success', 'Contato cadastrado na Agenda');
         }
     }
 
@@ -105,7 +105,7 @@ class AgendaController extends Controller
             'empresa'=>$request->empresa,
             'id_user'=>$request->id_user
         ]);
-        return redirect('agenda/');
+        return redirect('agenda/')->with('success', 'Contato editado!');
     }
 
     /**
@@ -123,7 +123,7 @@ class AgendaController extends Controller
         //$contato = ModelAgenda::findOrFail($id);
         $contato->delete();
 
-        return redirect('agenda/');
+        return redirect('agenda/')->with('success', 'Contato excluído da Agenda');
 
     }
 }

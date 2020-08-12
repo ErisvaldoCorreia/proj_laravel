@@ -8,7 +8,7 @@
     <hr/>
 
     <div class="text-center mt-3 mb-4">
-        <a href="#">
+        <a href="{{url("agenda/$contato->id/edit")}}">
             <button class="btn btn-success">Editar o Contato</button>
         </a>
     </div>
