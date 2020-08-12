@@ -20,12 +20,12 @@ class DatabaseSeeder extends Seeder
 class ProdutoTableSeeder extends Seeder {
     public function run()
     {
-        DB::insert('INSERT INTO users (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`)
+        DB::insert('INSERT INTO users (id, name, email, email_verified_at, password, remember_token, created_at, updated_at)
         VALUES (?,?,?,?,?,?,?,?)',
-        array('9', 'Empresa', 'teste@empresa.com', '2020-08-12 12:18:31', '12345', '12345', '2020-08-12 12:18:31', '2020-08-12 12:18:31'));
+        array('16', 'Contato 1', 'contact1@empresa.com', '2020-08-12 12:18:31', '12345', '12345', '2020-08-12 12:18:31', '2020-08-12 12:18:31'));
 
-        DB::insert('INSERT INTO users (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`)
+        DB::insert('INSERT INTO users (id, name, email, email_verified_at, password, remember_token, created_at, updated_at)
         VALUES (?,?,?,?,?,?,?,?)',
-        array('10', 'Amizade', 'amizade@empresa.com', '2020-08-12 12:18:31', '12345', '12345', '2020-08-12 12:18:31', '2020-08-12 12:18:31'));
+        array('18', 'Contato 2', 'contact2@empresa.com', '2020-08-12 12:18:31', '12345', '12345', '2020-08-12 12:18:31', '2020-08-12 12:18:31'));
     }
 }
